@@ -20,6 +20,9 @@ public class Resource {
     @Column(name = "res_name")
     private String res_name;
 
+    @Column(name = "res_type")
+    private String res_type;
+
     @Column(name = "sox_flag")
     private Integer sox_flag;
 
@@ -94,5 +97,13 @@ public class Resource {
 
     public void setUpdate_time(Timestamp update_time) {
         this.update_time = update_time;
+    }
+
+    public String getRes_type() {
+        return res_type;
+    }
+
+    public void setRes_type(String res_type) {
+        this.res_type = res_type;
     }
 }
