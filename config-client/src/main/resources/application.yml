@@ -1,0 +1,17 @@
+#server:
+#  port: 8082
+management:
+  endpoint:
+    health:
+      show-details: always
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+test:
+  attr1: ${data.username}
+  attr2: ${MYSQL_DB_PASSWORD}
+  attr3: '{cipher}0ae7f0522935b0ceee3027d1fd86cef63df28c6f60e0e3bca97870d87560ab9f'

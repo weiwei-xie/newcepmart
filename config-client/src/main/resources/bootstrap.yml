@@ -1,0 +1,46 @@
+eureka:
+  client:
+    serviceUrl:
+      register-with-eureka: true
+      fetch-registry: true
+      defaultZone: http://localhost:8080/eureka/
+  instance:
+    preferIpAddress: true
+spring:
+  profiles:
+    active: dev
+encrypt:
+  key: weiweixie1234
+
+---
+spring:
+  profiles: prod
+  application:
+    name: test-config
+  cloud:
+    config:
+      fail-fast: true
+#      uri: http://localhost:8081
+      name: {application}
+      label: main
+      profile: prod
+      discovery:
+        enabled: true
+        service-id: config-server-1
+
+
+---
+spring:
+  profiles: dev
+  application:
+    name: test-config
+  cloud:
+    config:
+      fail-fast: true
+#      uri: http://localhost:8081
+      name: {application}
+      label: main
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: config-server-1

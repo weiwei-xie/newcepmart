@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: eureka-server-test
+#  security:
+#    user:
+#      name: test
+#      password: 123456
+  cloud:
+    inetutils:
+      ignoredInterfaces:
+        - docker0
+        - veth.*
+        - VM.*
+      preferredNetworks:
+        - 192.168
