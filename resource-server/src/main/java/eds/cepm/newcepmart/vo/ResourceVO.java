@@ -1,39 +1,18 @@
-package eds.cepm.newcepmart;
+package eds.cepm.newcepmart.vo;
 
-import javax.persistence.*;
 import java.sql.Timestamp;
 
-@Entity
-@Table(name="resource_master")
-public class Resource {
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column(name = "res_id")
+public class ResourceVO {
     private Long res_id;
-
-    @Column(name = "res_parent_id")
     private Long res_parent_id;
-
-    @Column(name = "res_des")
     private String res_des;
-
-    @Column(name = "res_name")
     private String res_name;
-
-    @Column(name = "res_type")
     private String res_type;
-
-    @Column(name = "sox_flag")
     private Integer sox_flag;
-
-    @Column(name = "requestable")
     private Integer requestable;
-
-    @Column(name = "create_time")
     private Timestamp create_time;
-
-    @Column(name = "update_time")
     private Timestamp update_time;
+    private String res_fqn;
 
     public Long getRes_id() {
         return res_id;
@@ -65,6 +44,14 @@ public class Resource {
 
     public void setRes_name(String res_name) {
         this.res_name = res_name;
+    }
+
+    public String getRes_type() {
+        return res_type;
+    }
+
+    public void setRes_type(String res_type) {
+        this.res_type = res_type;
     }
 
     public Integer getSox_flag() {
@@ -99,11 +86,11 @@ public class Resource {
         this.update_time = update_time;
     }
 
-    public String getRes_type() {
-        return res_type;
+    public String getRes_fqn() {
+        return res_fqn;
     }
 
-    public void setRes_type(String res_type) {
-        this.res_type = res_type;
+    public void setRes_fqn(String res_fqn) {
+        this.res_fqn = res_fqn;
     }
 }
