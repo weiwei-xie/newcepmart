@@ -1,0 +1,26 @@
+eureka:
+  client:
+    serviceUrl:
+      register-with-eureka: true
+      fetch-registry: true
+      defaultZone: http://localhost:7000/eureka/
+  instance:
+    preferIpAddress: true
+
+spring:
+  application:
+    name: zipkin-server
+  main:
+    web-application-type: none
+  cloud:
+    config:
+      fail-fast: true
+      name: zipkin
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: config-server-1
+
+
+
+

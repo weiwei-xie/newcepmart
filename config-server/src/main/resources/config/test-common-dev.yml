@@ -1,5 +1,13 @@
-data:
-  env: localhost-dev-native
-  username: weiwxie-native
-  password: '{cipher}AQDNghI9CHpqobE0TUvksJFFqY/1hiMVSgi8jsEEUJPe0cP1cLlcE+InFdW79vy1gZT8EWN0wPGVDe7Iqk6tZXJpl4Fqb5uceKWtz0mmJp9/f4f7Cpv78fAXfeQh2hg1JGQaHqfdKUClNrzG1yqZqimnTdkFWj9AP2XgTc3cqjrsT4ODpXuLvI3/I9Q+EXbMXWpPkn23dMFuvd9uwYzbMZnFDSjOQmjiaqjSnaMd5W0zuGKK4kEuJdv7xYPYsJXJ9W0+k66FrSVOQzE3WQ8mFoc9k7wXm9+Nq4oh4SmcZmcqmrpBv8otIcgBUtcpvzKRrqC6woWEVQjV3luchUndbWWoZTCSMt2ivlTuxy+QQKHeL11IDv/ynYPF/w+/075ksrw='
-  password2: '{cipher}AQDNghI9CHpqobE0TUvksJFFqY/1hiMVSgi8jsEEUJPe0cP1cLlcE+InFdW79vy1gZT8EWN0wPGVDe7Iqk6tZXJpl4Fqb5uceKWtz0mmJp9/f4f7Cpv78fAXfeQh2hg1JGQaHqfdKUClNrzG1yqZqimnTdkFWj9AP2XgTc3cqjrsT4ODpXuLvI3/I9Q+EXbMXWpPkn23dMFuvd9uwYzbMZnFDSjOQmjiaqjSnaMd5W0zuGKK4kEuJdv7xYPYsJXJ9W0+k66FrSVOQzE3WQ8mFoc9k7wXm9+Nq4oh4SmcZmcqmrpBv8otIcgBUtcpvzKRrqC6woWEVQjV3luchUndbWWoZTCSMt2ivlTuxy+QQKHeL11IDv/ynYPF/w+/075ksrw='
+service-name:
+  request-service: test-request-service
+  resource-service: test-resource-service
+
+spring:
+  datasource:
+    url : jdbc:mysql://localhost:3306/new-cepm?useSSL=false
+    username : weiwxie1
+    password : '{cipher}AQAvW23aPbZRfxf4TWI9zPREZWNFTcgr8jwZrAnRqs8WmtqkXh9byQznW3uvPNc2CUMQbN/MlfvsxV6o6laHyqs8NciJlcQ+B10sVaDGMbAQLCYpRq4w14Pdhm92hgpPfn2J0Voxxp30EV96nmS+18Bh6aez1LLz6IDUhHk3gDbYUuht8rbx43EHnebGpHvlMxMFxBEyDE33U7hvkX0JKMNbZsJ4Rd8dlUG8yZFU+55Cl9XD0ZRuhRRQFg2zVmuxY7e1yGUVIt/APdWPgHpbNnSNdSeWtniIayMzh6W6UDchjleMmCtQ/J/U/+0oPrXcIsbKKpN5l2AzT4OnkXt+UtwIUUmpHzntDQB4UXvm6nu10lxyL+dAK+zNR61fwnaQK6k='
+    driver-class-name : com.mysql.cj.jdbc.Driver
+  jpa:
+    database: MYSQL
+    show-sql: true

@@ -12,7 +12,6 @@ spring:
   profiles:
     active: dev
   zipkin:
-#    base-url: http://localhost:8080
     base-url: http://zipkin-server/
 
   sleuth:
@@ -20,20 +19,16 @@ spring:
       percentage: 1.0
       probability: 1.0
 
-
-encrypt:
-  key: weiweixie1234
-
 ---
 spring:
   profiles: prod
   application:
-    name: test-resource-service
+    name: test-request-service
   cloud:
     config:
       fail-fast: true
 #      uri: http://localhost:8081
-      name: test-common,test-resource-service
+      name: test-common,test-request-service
       label: main
       profile: prod
       discovery:
@@ -45,12 +40,12 @@ spring:
 spring:
   profiles: dev
   application:
-    name: test-resource-service
+    name: test-request-service
   cloud:
     config:
       fail-fast: true
 #      uri: http://localhost:8081
-      name: test-common,test-resource-service
+      name: test-common,test-request-service
       label: main
       profile: dev
       discovery:

@@ -1,11 +1,2 @@
 server:
   port: 9002
-spring:
-  datasource:
-    url : jdbc:mysql://localhost:3306/new-cepm?useSSL=false
-    username : weiwxie1
-    password : '{cipher}AQAvW23aPbZRfxf4TWI9zPREZWNFTcgr8jwZrAnRqs8WmtqkXh9byQznW3uvPNc2CUMQbN/MlfvsxV6o6laHyqs8NciJlcQ+B10sVaDGMbAQLCYpRq4w14Pdhm92hgpPfn2J0Voxxp30EV96nmS+18Bh6aez1LLz6IDUhHk3gDbYUuht8rbx43EHnebGpHvlMxMFxBEyDE33U7hvkX0JKMNbZsJ4Rd8dlUG8yZFU+55Cl9XD0ZRuhRRQFg2zVmuxY7e1yGUVIt/APdWPgHpbNnSNdSeWtniIayMzh6W6UDchjleMmCtQ/J/U/+0oPrXcIsbKKpN5l2AzT4OnkXt+UtwIUUmpHzntDQB4UXvm6nu10lxyL+dAK+zNR61fwnaQK6k='
-    driver-class-name : com.mysql.jdbc.Driver
-  jpa:
-    database: MYSQL
-    show-sql: true

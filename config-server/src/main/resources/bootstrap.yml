@@ -3,7 +3,7 @@ eureka:
     serviceUrl:
       register-with-eureka: true
       fetch-registry: true
-      defaultZone: http://localhost:8080/eureka/
+      defaultZone: http://localhost:7000/eureka/
   instance:
     preferIpAddress: true
 encrypt:
@@ -22,13 +22,15 @@ spring:
     config:
       server:
         composite:
-          -
-            type: git
-            uri: https://github.com/weiwei-xie/spring-config-test
-            default-label: main
-            search-paths: config
-            timeout: 8
+#          -
+#            type: git
+#            uri: https://github.com/weiwei-xie/spring-config-test
+#            default-label: main
+#            search-paths: config
+#            timeout: 8
           -
             type: native
             search-locations: classpath:/config
 #        bootstrap: true
+server:
+  port: 7001
